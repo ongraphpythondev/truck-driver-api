@@ -20,7 +20,7 @@ class TimeStampedModel(models.Model):
 
 
 class Truck(TimeStampedModel):
-    name = models.CharField(unique=True, max_length=255)
+    name = models.CharField(primary_key=True, max_length=255)
     location = models.CharField(max_length=255, null=True)
     lat = models.FloatField(null=True)
     lng = models.FloatField(null=True)
